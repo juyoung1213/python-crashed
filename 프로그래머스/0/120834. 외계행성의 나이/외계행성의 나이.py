@@ -1,11 +1,13 @@
 def solution(age):
-    # 숫자와 알파벳을 매핑하는 문자열
-    digits_to_chars = 'abcdefghij'
-    
-    # age를 문자열로 변환
-    age_str = str(age)
-    
-    # 각 숫자를 대응하는 알파벳으로 변환
-    result = ''.join(digits_to_chars[int(digit)] for digit in age_str)
-    
-    return result
+    age = str(age)
+    age = age.replace('0', 'a')
+    age = age.replace('1', 'b')
+    age = age.replace('2', 'c')
+    age = age.replace('3', 'd')
+    age = age.replace('4', 'e')
+    age = age.replace('5', 'f')
+    age = age.replace('6', 'g')
+    age = age.replace('7', 'h')
+    age = age.replace('8', 'i')
+    age = age.replace('9', 'j')
+    return age
