@@ -1,10 +1,21 @@
 def solution(my_string):
-    seen = set()  # 중복 여부를 확인하기 위한 집합
-    result = []  # 결과를 담을 리스트
-
-    for char in my_string:
-        if char not in seen:
-            seen.add(char)  # 새로운 문자를 집합에 추가
-            result.append(char)  # 결과 리스트에 추가
-
-    return ''.join(result)  # 리스트를 문자열로 변환하여 반환
+    # 빈 세트 만든 후
+    # 세트에 알파벳이 없을 경우에는 세트와 정답에 알파벳 추가
+    seen = set()
+    result = ""
+    
+    for chr in my_string:
+        if chr not in seen:
+            seen.add(chr)
+            result += chr
+    return result
+        
+    
+def solution(my_string):
+    answer = ''
+    set_letters = set(my_string)
+    for chr in my_string:
+        if chr in set_letters:
+            answer += chr
+            set_letters.remove(chr)
+    return answer
